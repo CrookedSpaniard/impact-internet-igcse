@@ -17,10 +17,10 @@ FD.add({
   mount(el) {
     // Figure 7.12: a charity and the internet services it uses.
     const MAP = [
-      ['🌐', 'Own website', [250, 105], [['Displays goals', 250, 35], ['Explains fundraising activities', 85, 85], ['Hosts contact forms', 85, 150]]],
+      ['🌐', 'Own website', [250, 105], [['Displays goals', 250, 35], ['Explains fundraising activities', 105, 62], ['Hosts contact forms', 85, 150]]],
       ['💳', 'Payment processors (such as PayPal)', [450, 95], [['Collecting donations', 520, 30]]],
-      ['👥', 'Social networks', [570, 200], [['Connecting volunteers and donors', 680, 115], ['Viral marketing', 712, 200], ['Advertising on networks', 680, 285]]],
-      ['🍪', 'Cookies', [500, 290], [['Tracking donors’ online activities', 650, 330]]],
+      ['👥', 'Social networks', [570, 200], [['Connecting volunteers and donors', 650, 115], ['Viral marketing', 704, 200], ['Advertising on networks', 676, 285]]],
+      ['🍪', 'Cookies', [500, 290], [['Tracking donors’ online activities', 650, 322]]],
       ['✉️', 'Emails', [330, 310], [['Getting donor feedback', 150, 345], ['Communicating with people on mailing list', 290, 380], ['Business communications', 480, 352]]],
       ['▶️', 'Video-sharing websites', [190, 220], [['Promotional videos', 75, 250], ['Advertising on videos', 85, 300]]],
     ];
