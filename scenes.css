@@ -321,3 +321,4 @@ button.sto-it:hover { border-color: var(--scene); }
 .gp-offers { padding-left: 1.1rem; display: grid; gap: .25rem; font-size: .88rem; min-height: 3rem; }
 .gp-feed { list-style: none; padding: 0; display: grid; gap: .3rem; font-size: .86rem; }
 .gp-feed li { background: var(--surface-2); border-radius: 8px; padding: .3rem .5rem; animation: stoIn .4s ease-out; }
+.hm-tag { fill: var(--surface); stroke: var(--line); }

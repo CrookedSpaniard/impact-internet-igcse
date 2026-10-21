@@ -35,9 +35,9 @@ FD.add({
           </div>
         </div>
         <div data-panel="wiki" hidden>
-          <div class="win"><div class="win-bar"><span class="url">🌐 wiki.example/Alzira</span></div><div class="win-body">
-            <b>Alzira</b><ul class="nw-wiki" id="wiki"><li>Alzira is a town in the province of Valencia, Spain.</li><li>The river Júcar flows through the town.</li></ul>
-            <div class="chk-btns"><button class="btn" data-ed="t">✏️ Add: “It is about 40 km south of Valencia.”</button><button class="btn" data-ed="f">✏️ Add: “It has the tallest tower in Europe.”</button></div></div></div>
+          <div class="win"><div class="win-bar"><span class="url">🌐 wiki.example/Toledo</span></div><div class="win-body">
+            <b>Toledo</b><ul class="nw-wiki" id="wiki"><li>Toledo is a city in central Spain.</li><li>The river Tagus flows around the old town.</li></ul>
+            <div class="chk-btns"><button class="btn" data-ed="t">✏️ Add: “It is about 70 km south of Madrid.”</button><button class="btn" data-ed="f">✏️ Add: “It has the tallest tower in Europe.”</button></div></div></div>
         </div>
         <div data-panel="riots" hidden>
           <div class="ctrls"><button class="btn primary" id="rNext">▶ Next event</button><button class="btn ghost" id="rAgain">↺ From the start</button></div>
@@ -83,7 +83,7 @@ FD.add({
     function edit(t) {
       show('wiki');
       const b = root.querySelector(`[data-ed="${t}"]`); b.disabled = true;
-      $('#wiki').appendChild(FD.h(`<li class="new">${t === 't' ? 'It is about 40 km south of Valencia.' : 'It has the tallest tower in Europe. <sup class="bad-t">[citation needed]</sup>'} <span class="pill">edited by a user just now</span></li>`));
+      $('#wiki').appendChild(FD.h(`<li class="new">${t === 't' ? 'It is about 70 km south of Madrid.' : 'It has the tallest tower in Europe. <sup class="bad-t">[citation needed]</sup>'} <span class="pill">edited by a user just now</span></li>`));
       $('#msg').className = 'verdict' + (t === 'f' ? ' bad' : '');
       $('#msg').innerHTML = t === 'f' ? 'Anyone can add information, so it <b>may or may not be true</b>. <b>User-generated</b> reference sites like Wikipedia have challenged society’s ideas about expertise.' : 'Truth, knowledge and accuracy are no longer checked by a limited number of experts or editors: <b>ordinary people</b> can now put information online.';
     }

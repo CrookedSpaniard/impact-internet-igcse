@@ -16,7 +16,7 @@ FD.add({
   ],
   mount(el) {
     const INFO = [
-      ['loc', '📍 Location', 'Calle Mayor, Alzira', true], ['school', '🏫 School name', 'British School', true], ['phone', '📞 Phone number', '612 345 678', true],
+      ['loc', '📍 Location', '14 Park Road, Riverton', true], ['school', '🏫 School name', 'Riverton High School', true], ['phone', '📞 Phone number', '612 345 678', true],
       ['name', '🪪 Real name', 'Laura Martínez', true], ['photos', '🖼️ Photos', '24 photos', true], ['addr', '✉️ Email address', 'laura.m@example.com', true],
       ['band', '🎸 Favourite band', 'The Weekenders', false], ['hobby', '♟️ Hobby', 'Chess', false],
     ];

@@ -27,7 +27,7 @@ FD.add({
         <div class="ptabs"><button data-p="office">🏢 From the office to home</button><button data-p="commute">🚗 No need to travel</button><button data-p="scale">⚖️ Benefits and drawbacks</button></div>
         <div data-panel="office">
           <div class="ctrls"><span class="seg" id="era"><button data-v="paper">📁 Before the internet</button><button data-v="lan">🔌 Office LAN</button><button data-v="net">🌐 Internet: work from home</button></span></div>
-          <div class="sim-box"><svg viewBox="0 0 600 260" id="map" role="img" aria-label="Offices and homes connected"></svg><p class="note" id="eT"></p></div>
+          <div class="sim-box"><svg viewBox="0 0 600 285" id="map" role="img" aria-label="Offices and homes connected"></svg><p class="note" id="eT"></p></div>
         </div>
         <div data-panel="commute" hidden>
           <div class="ctrls">
@@ -65,11 +65,11 @@ FD.add({
           if (v === 'lan') s += `<line class="wire on" x1="${x + 10}" y1="${y}" x2="${x < 300 ? 285 : 315}" y2="132"/>`;
         });
         HOMES.forEach(([x, y]) => { s += `<text x="${x}" y="${y}" class="emo" font-size="22">🏠</text><path class="hm-trip" d="M${x} ${y + 12} L${x < 300 ? 220 : 380} ${y < 130 ? 95 : 165}"/>`; });
-        s += `<text class="svg-sm" x="300" y="200">${v === 'lan' ? 'Employees must be inside the office to reach the LAN' : 'Employees travel 09.00–17.00 to discuss, collect, file paperwork and be supervised'}</text>`;
+        s += `<text class="svg-sm" x="300" y="278">${v === 'lan' ? 'Employees must be inside the office to reach the LAN' : 'Employees travel 09.00–17.00 to discuss, collect, file paperwork and be supervised'}</text>`;
       } else {
         HOMES.forEach(([x, y], i) => HOMES.forEach(([x2, y2], j) => { if (j > i && (j - i) % 2) s += `<line class="wire on hm-net" x1="${x}" y1="${y}" x2="${x2}" y2="${y2}"/>`; }));
         HOMES.forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="20" class="hm-node"/><text x="${x}" y="${y}" class="emo" font-size="22">🏠</text><text x="${x + 16}" y="${y + 14}" class="emo" font-size="13">💻</text>`; });
-        s += `<text class="svg-lbl" x="300" y="135">🌐 The internet is decentralised</text><text class="svg-sm" x="300" y="152">not controlled by any one individual or organisation</text>`;
+        s += `<rect class="hm-tag" x="150" y="118" width="300" height="42" rx="8"/><text class="svg-lbl" x="300" y="135">🌐 The internet is decentralised</text><text class="svg-sm" x="300" y="152">not controlled by any one individual or organisation</text>`;
       }
       $('#map').innerHTML = s;
       $('#eT').innerHTML = { paper: 'Before the internet, offices were a central place to discuss business, collect, distribute and file paperwork, and to be supervised by managers.', lan: 'Later, employees could use <b>LANs</b> to access shared storage and resources, but they still had to be <b>within the office</b>.', net: 'As computers became cheaper and more powerful, people could use digital devices (their employer’s or their own) to connect to the internet and <b>work from home</b>.' }[v];
